@@ -36,7 +36,7 @@ where rk = 1
 create label for response variable: 0 if not a xseller, 1 is a xseller
 - To predict the Xseller, weeks between DNA test is activated and DNA order is created are generated and binned into 12 levels(1 week, 2 weeks.....> 10 weeks).  If never activate date is missing, it will return -1. 
 - The overall xseller rate is about *12%*
-- The next step is to explore relationships between predict variables and response variable. First let's take a look at how customer type affect whether or not a Xseller
+- The next step is to explore relationships between predict variables and response variable. First let's take a look at how customer type affect whether or not an Xseller
 
 |customer_type_group| Xseller_rate|
 |------------------ |------------:|
@@ -47,7 +47,7 @@ create label for response variable: 0 if not a xseller, 1 is a xseller
 ![alt text](https://github.com/Yuming408/ancestry/blob/master/Screen%20Shot%202017-10-28%20at%2010.12.10%20PM.png)
 
 - It seems customers who are existing registrant have a higher chance to become Xseller for Acom subscriptions.
-- Next I am looking at the relationship between week difference of dateDNA test is activated and date DNA order is created and the whether or not a Xseller.
+- Next I am looking at the relationship between days difference of DNA test is activated and DNA order is created and whether or not an Xseller.
 
 |week_diff|Xseller_rate|
 |---------|-----------:|
