@@ -32,7 +32,7 @@ For case 2, you should not launch the product
 For case 3, you should not launch the product, even if it is statistically significant, but not practically useful
 For case 4- 6: more tests are needed to improve the power
 
-![alt text](https://github.com/Yuming408/ancestry/blob/master/Screen%20Shot%202017-10-27%20at%203.49.53%20PM.png"ab test")
+![alt text](https://github.com/Yuming408/ancestry/blob/master/Screen%20Shot%202017-10-27%20at%203.49.53%20PM.png "ab test")
 
 
 
