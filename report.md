@@ -46,7 +46,7 @@ create label for response variable: 0 if not a xseller, 1 is a xseller
 
 ![alt text](https://github.com/Yuming408/ancestry/blob/master/Screen%20Shot%202017-10-28%20at%2010.12.10%20PM.png)
 
-- It seems cusomters who are existing registrant have a higher chance to become Xseller for Acom subscriptions.
+- It seems customers who are existing registrant have a higher chance to become Xseller for Acom subscriptions.
 - Next I am looking at the relationship between week difference of dateDNA test is activated and date DNA order is created and the whether or not a Xseller.
 
 |week_diff|Xseller_rate|
