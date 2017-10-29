@@ -47,7 +47,7 @@ create label for response variable: 0 if not a xseller, 1 is a xseller
 ![alt text](https://github.com/Yuming408/ancestry/blob/master/Screen%20Shot%202017-10-28%20at%2010.12.10%20PM.png)
 
 - It seems customers who are existing registrant have a higher chance to become Xseller for Acom subscriptions.
-- Next I am looking at the relationship between days difference of DNA test is activated and DNA order is created and whether or not an Xseller.
+- Next I am looking at if days difference of DNA test is activated and DNA order is created affects whether or not an Xseller.
 
 |week_diff|Xseller_rate|
 |---------|-----------:|
@@ -68,7 +68,7 @@ create label for response variable: 0 if not a xseller, 1 is a xseller
 
 - It shows customers who activate the test within a week after they place the order have higher chance to become Xseller. In other words, customers who react fast after their DNA kit purchase are more likely to become Xseller
 
-- I am also interested to see if days takes the result ready affect the Xseller conversation. Using the same approach. We can see the only significant difference is whether or not the result is ready. From our previous analysis, we know some users do not activate their DNA test so they never get their result. 
+- I am also interested to see if days takes the result ready affect the Xseller convertion. Using the same approach. We can see the only significant difference is whether or not the result is ready. From our previous analysis, we know some users do not activate their DNA test so they never get their result. 
 
 |daystogetresult_grp|Xseller_rate|
 |-------------------|------------|
