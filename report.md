@@ -68,7 +68,7 @@ create label for response variable: 0 if not a xseller, 1 is a xseller
 
 - It shows customers who activate the test within a week after they place the order have higher chance to become Xseller. In other words, customers who react fast after their DNA kit purchase are more likely to become Xseller
 
-- I am also interested to see if days takes the result ready affect the Xseller convertion. Using the same approach. We can see the only significant difference is whether or not the result is ready. From our previous analysis, we know some users do not activate their DNA test so they never get their result. 
+- I am also interested to see if days takes the result ready affect the Xseller conversion. Using the same approach. We can see the only significant difference is whether or not the result is ready. From our previous analysis, we know some users do not activate their DNA test so they never get their result. 
 
 |daystogetresult_grp|Xseller_rate|
 |-------------------|------------|
