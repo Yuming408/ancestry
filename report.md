@@ -24,6 +24,6 @@ where rk = 1
 
 2. Experiment design
 - To set up the experiment, first you need to see what is the traffic looks like on your website, how many samples that are available. Then you decide how you want to run your test, it could be through marketing campaign or homepage modification depending on your budget and implementation difficuties. Then your want to split your samples into control and treatment group. Make sure it is a randomly spliting between control and treatment and trying to eliminate all possible confounding factors. For control group, there is no modification; for treatment group, you want to add message about your new product through marketing campaign or homepage. You should define the metrics you want to track to evaluate your test
-- 
+- To determine and sample size, you need to define what is the significant level, power, base line conversation rate for the metrics you choose, practical significant level. Use sample size/traffic to decide how long you want to run your experiment. Depends on how the test will be done, for example, if you choose to run the experiment through email campaign, the metrics will be email open rate, pruchase rate; If you choose to change the homepage, you can use click through rate, purchase rate
 
 
