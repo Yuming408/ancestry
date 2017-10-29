@@ -108,7 +108,7 @@ Use 3 fold cross validation method, the model produce AUC of 0.74. It might not 
 |dna_visittrafficsubtype|0.0752522|	0.0464373|
 |regtenure|0.0437847|	0.0270191|
 
-From the model, we can see customer type and week difference ready are the most important features, which confirms with the previous finding.
+From the model, we can see customer type and week difference to activate the test are the most important features, which confirms with the previous finding.
 
 - *Recommendation*:
 
