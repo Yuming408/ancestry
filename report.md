@@ -116,7 +116,7 @@ From the model, we can see customer type and week difference to activate the tes
 
 2. New registrant also consists an important component in terms of population. We can think of ways to improve their experience with Ancestry product. Make sure to identify any friction for new customers when they are using Ancestry product.
 
-3. The faster a user activates their test the more likely they will convert to Xseller. After users place DNA orders, we can remind them to activate their tests as soon as possible and educate them on what are the benefits of the tests. Assuming missing test date means no activation, about 75k users do not activate their test and lose the chance to experience Ancestry DNA product. They might forget or not sure what to do to activate the test so we want to eliminate these possibilities.
+3. The faster a user activates their test the more likely they will convert to Xseller. After users place DNA orders, we can remind them to activate their tests as soon as possible and educate them on what are the benefits of the tests. Assuming missing test date means no activation, about 75k users do not activate their test and lose the chance to experience Ancestry DNA product. They might forget or not sure what to do to activate the test and we want to eliminate these cases.
 
 
 
