@@ -1,5 +1,5 @@
 # Ancestry data challenge
-1. SQL
+1. *SQL*
 ```
 select DNAtest_date, sum(count(testgid)) over (order by DNAtest_date) as cum_ct
 from DNA_purchase where DNAtest_date >= '2017-01-01' and DNAtest_date <= '2017-01-31'
@@ -22,19 +22,16 @@ group by 1,2,3,4) inq) inq_1
 where rk = 1
 ```
 
-2. Experiment design
-- To set up the experiment, first you need to see what is the traffic looks like on your website, how many samples that are available. Then you decide how you want to run your test, it could be through marketing campaign or homepage modification depending on your budget and implementation difficuties. Then your want to split your samples into control and treatment group. Make sure it is a randomly spliting between control and treatment and trying to eliminate all possible confounding factors. For control group, there is no modification; for treatment group, you want to add message about your new product through marketing campaign or homepage. You should define the metrics you want to track to evaluate your test
-- To determine and sample size, you need to define what is the significant level, power, base line conversation rate for the metrics you choose, practical significant level. Use sample size/traffic to decide how long you want to run your experiment. Depends on how the test will be done, for example, if you choose to run the experiment through email campaign, the metrics will be email open rate, pruchase rate; If you choose to change the homepage, you can use click through rate, purchase rate
+2. *Experiment design*
+- To set up the experiment, first you need to see what is the traffic looks like on your website, how many samples that are available. Then you decide how you want to run your test, it could be through marketing campaign or homepage modification depending on your budget and implementation difficulties. Then your want to split your samples into control and treatment group. Make sure it is a randomly splitting between control and treatment and trying to eliminate all possible confounding factors. For control group, there is no modification; for treatment group, you want to add message about your new product through marketing campaign or homepage. You should define the metrics you want to track to evaluate your test
+- To determine and sample size, you need to define what is the significant level, power, base line conversation rate for the metrics you choose, practical significant level. Use sample size/traffic to decide how long you want to run your experiment. Depends on how the test will be done, for example, if you choose to run the experiment through email campaign, the metrics will be email open rate, purchase rate; If you choose to change the homepage, you can use click through rate, purchase rate
 - I will construct the confidence interval to analyze the result. The reason I am choosing confidence interval over p value method is because as your sample size gets larger, you are more likely to a smaller p value and conclude a statistically significant result. However, you need to decide if it is practically useful to launch this product. So sometimes, you need to decide what is the practical significant level looks like. Use the confidence interval approach, you can compare your results and see if it is both statistically significant and practically useful.
-- I will use the below figure to show use case, dmin is the practical significant level, the figure is from the [Udacity AB test class] (https://www.udacity.com/course/ab-testing--ud257)
-For case 1, you should launch the product since it is practically significant
-For case 2, you should not launch the product
-For case 3, you should not launch the product, even if it is statistically significant, but not practically useful
-For case 4- 6: more tests are needed to improve the power
+- I will use the below figure to show use case, dmin is the practical significant level, the figure is from the [Udacity AB test class] (https://www.udacity.com/course/ab-testing--ud257) For case 1, you should launch the product since it is practically significant For case 2, you should not launch the product For case 3, you should not launch the product, even if it is statistically significant, but not practically useful For case 4- 6: more tests are needed to improve the power
+
 
 ![alt text](https://github.com/Yuming408/ancestry/blob/master/Screen%20Shot%202017-10-27%20at%203.49.53%20PM.png "ab test")
 
-3 Case study
+3 *Case study*
 - For data cleaning and feature engineering, first 
 create label for response variable: 0 if not a xseller, 1 is a xseller
 - To predict the Xseller, weeks between DNA test is activated and DNA order is created are generated and binned into 12 levels(1 week, 2 weeks.....> 10 weeks).  If never activate the test, it will return -1. 
@@ -113,7 +110,7 @@ Use 3 fold cross validation method, the model produce AUC of 0.74. It might not 
 
 From the model, we can see customer type and week difference ready are the most important features, which confirms with the previous finding.
 
-- Recommendation:
+- *Recommendation*:
 
 1. Existing registrant have a higher chance to become Xseller than other types of customers, they are also the highest population compare to other groups. when we trying to allocate marketing campaign effort, probably we can target more existing users.
 
