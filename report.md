@@ -41,6 +41,11 @@ create label for response variable: 0 if not a xseller, 1 is a xseller
 - The overall xseller rate is about *12%*
 - The next step is to explore relationships between predict variables and response variable. First let's take a look at how customer type affect whether or not a Xseller
 
+|customer_type_group| Xseller rate|
+|------------------ |------------:|
+| Acom Sub     | 3%|
+|Existing Reg|18%|
+|New Reg|15%|
 
 - It seems cusomters who are existing registrant have a much higher chance to become Xseller for Acom subscriptions.
 - Next I am looking at the relationship between week difference of dateDNA test is activated and date DNA order is created and the whether or not a Xseller.
