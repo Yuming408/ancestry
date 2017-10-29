@@ -114,7 +114,9 @@ Use 3 fold cross validation method, the model produce AUC of 0.74. It might not 
 From the model, we can see customer type and week difference ready are the most important features, which confirms with the previous finding.
 
 -Recommendation:
-
+-- Existing registrant have a higher chance to become Xseller than other types of customers, they are also the highest population compare to other groups. when we trying to allocate marketing campaign effort, probably we can target more existing users.
+-- New registrant also consists an important conponent in terms of population, we can think of ways to improve their experience with Ancestry product. Make sure to identify any friction for new customers when they are using Ancestry product.
+-- 
 
 
 
