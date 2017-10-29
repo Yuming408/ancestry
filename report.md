@@ -71,7 +71,7 @@ create label for response variable: 0 if not a xseller, 1 is a xseller
 
 - It shows customers who activate the test within a week after they place the order have higher chance to become Xseller. In other words, customers who react fast after their DNA kit purchase are more likely to become Xseller
 
-- I am also interested to see if days takes the result ready affect the Xseller conversation. Using the same approach:
+- I am also interested to see if days takes the result ready affect the Xseller conversation. Using the same approach. We can see the only significant difference is whether or not the result is ready. From our previous analysis, we know some users do not activate their DNA test so they never get their result. 
 
 |daystogetresult_grp|Xseller_rate|
 |-------------------|------------|
@@ -99,17 +99,22 @@ training. Alternatively, logistic regression or SVM can be used for this problem
 more appropriate for numerical variables and SVM can be inefficient to train. Since random forest produced
 a good result, so I did not try other models.
 
+The variables I use to predict the results are: customer_type_group, week_diff, dna_visittrafficsubtype, regtenure. daystogetresult_grp is not chosen because from previous anaysis, if the user never activate the DNA test, they will not get their test result, if they do get their results, how long the days take does not seem to be an important factor.
+
 Use 3 fold cross validation method, the model produce AUC of 0.74. It might not be an ideal result in terms of model performance, however we can still identify feature importance. Here is the feature importance:
+
 
 |variable|	relative_importance|	scaled_importance	percentage|
 |--------|---------------------|------------------------------|
-|customer_type_group|1.0|	0.5954989|
-|week_diff|0.3790300|	0.2257120|
-|daystogetresult_grp|0.1907589|	0.1135967|
-|dna_visittrafficsubtype|0.0667114|	0.0397266|
-|regtenure|0.0427639|	0.0254658|
+|customer_type_group|1.0|	0.6170893|
+|week_diff|0.5014742|	0.3094543|
+|dna_visittrafficsubtype|0.0752522|	0.0464373|
+|regtenure|0.0437847|	0.0270191|
 
-From the model, we can see customer type, week difference, and days to get result ready are the three important features. 
+From the model, we can see customer type and week difference ready are the most important features, which confirms with the previous finding.
+
+-Recommendation:
+
 
 
 
