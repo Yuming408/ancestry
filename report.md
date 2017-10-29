@@ -28,6 +28,7 @@ where rk = 1
 - I will construct the confidence interval to analyze the result. The reason I am choosing confidence interval over p value method is because as your sample size gets larger, you are more likely to get a smaller p value and conclude a statistically significant result. However, you need to decide if it is practically useful to launch this product. So sometimes, you need to decide what is the practical significant level looks like. Use the confidence interval approach, you can compare your results and see if it is both statistically significant and practically useful.
 - I will use the below figure to show use case, dmin is the practical significant level, the figure is from the 
 [Udacity AB test class](https://www.udacity.com/course/ab-testing--ud257)
+
 For case 1, you should launch the product since it is practically significant For case 2, you should not launch the product For case 3, you should not launch the product, even if it is statistically significant, but not practically useful For case 4- 6: more tests are needed to improve the power
 
 ![alt text](https://github.com/Yuming408/ancestry/blob/master/Screen%20Shot%202017-10-27%20at%203.49.53%20PM.png "ab test")
