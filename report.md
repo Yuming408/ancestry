@@ -51,6 +51,7 @@ create label for response variable: 0 if not a xseller, 1 is a xseller
 
 - It seems cusomters who are existing registrant have a higher chance to become Xseller for Acom subscriptions.
 - Next I am looking at the relationship between week difference of dateDNA test is activated and date DNA order is created and the whether or not a Xseller.
+
 |week_diff|Xseller_rate|
 |---------|-----------:|
 |-1|	5%|
@@ -69,6 +70,49 @@ create label for response variable: 0 if not a xseller, 1 is a xseller
 ![alt text](https://github.com/Yuming408/ancestry/blob/master/week_diff.png)
 
 - It shows customers who activate the test within a week after they place the order have higher chance to become Xseller. In other words, customers who react fast after their DNA kit purchase are more likely to become Xseller
+
+- I am also interested to see if days takes the result ready affect the Xseller conversation. Using the same approach:
+
+|daystogetresult_grp|Xseller_rate|
+|-------------------|------------|
+|-1|7%|
+|1 week|16%|
+|2 weeks|16%|
+|3 weeks|15%|
+|4 weeks|15%|
+|5 weeks|17%|
+|6 weeks|17%|
+|7 weeks|16%|
+|8 weeks|15%|
+|9 weeks|16%|
+|10 weeks|17%|
+|>10 weeks|15%|
+
+
+- Predictive model: 
+
+To further understand how we can leverage these data to make recommendations for cross sell, I build a model to predict which users are more likely to become Xseller. Since all of the variables are categorical and have some noise, I used random
+forest to predict whether or not this user is an Xseller. Random forest is a tree based ensemble
+method. It can handle categorical features very well. Random forest is robust to noise data and preventing
+the model from over fitting. For this problem, I used H2O random forest library to speed up the model
+training. Alternatively, logistic regression or SVM can be used for this problem. But logistic regression is
+more appropriate for numerical variables and SVM can be inefficient to train. Since random forest produced
+a good result, so I did not try other models.
+
+Use 3 fold cross validation method, the model produce AUC of 0.74. It might not be an ideal result in terms of model performance, however we can still identify feature importance. Here is the feature importance:
+
+|variable|	relative_importance|	scaled_importance	percentage|
+|--------|---------------------|------------------------------|
+|customer_type_group|1.0|	0.5954989|
+|week_diff|0.3790300|	0.2257120|
+|daystogetresult_grp|0.1907589|	0.1135967|
+|dna_visittrafficsubtype|0.0667114|	0.0397266|
+|regtenure|0.0427639|	0.0254658|
+
+From the model, we can see customer type, week difference, and days to get result ready are the three important features. 
+
+
+
 
 
 
