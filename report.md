@@ -34,7 +34,7 @@ where rk = 1
 3 *Case study*
 - For data cleaning and feature engineering, first 
 create label for response variable: 0 if not a xseller, 1 is a xseller
-- To predict the Xseller, weeks between DNA test is activated and DNA order is created are generated and binned into 12 levels(1 week, 2 weeks.....> 10 weeks).  If never activate the test, it will return -1. 
+- To predict the Xseller, weeks between DNA test is activated and DNA order is created are generated and binned into 12 levels(1 week, 2 weeks.....> 10 weeks).  If never activate date is missing, it will return -1. 
 - The overall xseller rate is about *12%*
 - The next step is to explore relationships between predict variables and response variable. First let's take a look at how customer type affect whether or not a Xseller
 
