@@ -41,7 +41,7 @@ create label for response variable: 0 if not a xseller, 1 is a xseller
 - The overall xseller rate is about *12%*
 - The next step is to explore relationships between predict variables and response variable. First let's take a look at how customer type affect whether or not a Xseller
 
-|customer_type_group| Xseller rate|
+|customer_type_group| Xseller_rate|
 |------------------ |------------:|
 | Acom Sub     | 3%|
 |Existing Reg|18%|
@@ -49,8 +49,25 @@ create label for response variable: 0 if not a xseller, 1 is a xseller
 
 ![alt text](https://github.com/Yuming408/ancestry/blob/master/Screen%20Shot%202017-10-28%20at%2010.12.10%20PM.png)
 
-- It seems cusomters who are existing registrant have a much higher chance to become Xseller for Acom subscriptions.
+- It seems cusomters who are existing registrant have a higher chance to become Xseller for Acom subscriptions.
 - Next I am looking at the relationship between week difference of dateDNA test is activated and date DNA order is created and the whether or not a Xseller.
+|week_diff|Xseller_rate|
+|---------|-----------:|
+|-1|	5%|
+|1 week|16%|
+|2 weeks|14%|
+|3 weeks|15%|
+|4 weeks|14%|
+|5 weeks|14%|
+|6 weeks|13%|
+|7 weeks|14%|
+|8 weeks|13%|
+|9 weeks|12%|
+|10 weeks|12%|
+|>10 weeks|10%|
+
+![alt text](https://github.com/Yuming408/ancestry/blob/master/week_diff.png)
+
 - It shows customers who activate the test within a week after they place the order have higher chance to become Xseller. In other words, customers who react fast after their DNA kit purchase are more likely to become Xseller
 
 
